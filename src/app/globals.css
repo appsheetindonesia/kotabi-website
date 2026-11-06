@@ -1,26 +1,132 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@theme {
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Warna brand tetap di kedua tema */
+  --color-accent: #f5c518;
+  --color-logo-yellow: #f2e100;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #1ebe5d;
+
+  /* Permukaan gelap tetap — tidak ikut swap di dark mode */
+  --color-night: #0b0f1a;
+  --color-night-soft: #1b2433;
+  --color-snow: #ffffff;
+
+  /* Token semantik — mode terang (default) */
+  --color-ink: #0b0f1a;
+  --color-paper: #ffffff;
+  --color-sand: #f6f4f0;
+  --color-line: #e3e0da;
+  --color-muted: #5b6472;
+  --color-accent-ink: #7a5f00;
+  --color-brand: #1d4ed8;
+  --color-brand-dark: #1e40af;
+  --color-link: #1d4ed8;
+
+  --radius-card: 4px;
+  --radius-btn: 4px;
+  --radius-pill: 9999px;
+
+  --shadow-card: 0 1px 3px rgb(0 0 0 / 0.06), 0 4px 12px -4px rgb(0 0 0 / 0.04);
+
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-rail: rail 34s linear infinite;
+  --animate-rail-reverse: rail 34s linear infinite reverse;
+  --animate-hero-float: heroFloat 6s ease-in-out infinite;
+  --animate-mini-float: miniFloat 5s ease-in-out infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes rail {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes heroFloat {
+    0%,
+    100% {
+      transform: rotate(4deg) translateY(0);
+    }
+    50% {
+      transform: rotate(1deg) translateY(-15px);
+    }
+  }
+
+  @keyframes miniFloat {
+    0%,
+    100% {
+      transform: rotate(8deg) translateY(0);
+    }
+    50% {
+      transform: rotate(4deg) translateY(-12px);
+    }
   }
 }
 
+/* Dark mode: swap token semantik (utilitas memakai var()) */
+.dark {
+  color-scheme: dark;
+
+  --color-ink: #e9edf4;
+  --color-paper: #0c1220;
+  --color-sand: #131b2a;
+  --color-line: #263143;
+  --color-muted: #9aa6b6;
+  --color-accent-ink: #f2e100;
+  --color-link: #93b4ff;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-link);
+  outline-offset: 2px;
+}
+
+.faq-item[open] .faq-icon {
+  transform: rotate(180deg);
+  border-color: var(--color-link);
+  color: var(--color-link);
+}
+
+.faq-icon {
+  transition: transform 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Animasi rail mati: rail tetap bisa di-scroll manual */
+  .gallery-rail {
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+  }
 }
