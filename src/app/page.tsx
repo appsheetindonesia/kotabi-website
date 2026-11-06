@@ -83,7 +83,7 @@ export default function Home() {
             </div>
 
             <div className="relative">
-              <div className="relative aspect-square overflow-hidden rounded-card border border-line bg-sand shadow-card animate-hero-float md:aspect-[4/3]">
+              <div className="relative aspect-square overflow-hidden rounded-card border border-line bg-sand shadow-card animate-hero-float">
                 <Image
                   src="/img/konveksi-jas-almamater-berkualitas.jpg"
                   alt="Jas almamater custom produksi KOTABI"
@@ -93,7 +93,7 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -bottom-8 -left-4 hidden aspect-square w-40 overflow-hidden rounded-card border-4 border-paper shadow-card animate-mini-float md:block lg:w-48">
+              <div className="absolute -top-8 -right-4 hidden aspect-square w-36 overflow-hidden rounded-card border-4 border-paper shadow-card animate-mini-float md:block lg:w-44">
                 <Image
                   src="/img/konveksi-toga-wisuda-terpercaya.jpg"
                   alt="Toga wisuda produksi KOTABI"
@@ -234,10 +234,10 @@ export default function Home() {
         </section>
 
         {/* Stats */}
-        <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-28">
-          <dl className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+        <section className="px-6 py-10 md:px-10 md:py-14">
+          <dl className="mx-auto grid max-w-4xl grid-cols-2 gap-6 text-center sm:grid-cols-4 sm:gap-8">
             {STATS.map((stat) => (
-              <div key={stat.value} className="flex flex-col gap-1">
+              <div key={stat.value} className="flex flex-col items-center gap-1">
                 <dt className="sr-only">{stat.label}</dt>
                 <dd className="text-3xl font-bold tracking-tight">{stat.value}</dd>
                 <dd className="text-sm text-muted">{stat.label}</dd>
