@@ -83,9 +83,9 @@ export default function Home() {
             </div>
 
             <div className="relative">
-              <div className="relative aspect-square overflow-hidden rounded-card border border-line bg-sand shadow-card animate-hero-float">
+              <div className="relative aspect-17/18 overflow-hidden rounded-card border border-line bg-sand shadow-card animate-hero-float">
                 <Image
-                  src="/img/konveksi-jas-almamater-berkualitas.jpg"
+                  src="/img/konveksi-jas-almamater-clean.jpg"
                   alt="Jas almamater custom produksi KOTABI"
                   fill
                   priority
@@ -93,9 +93,9 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -top-6 -right-3 aspect-square w-24 overflow-hidden rounded-card border-4 border-paper shadow-card animate-mini-float sm:w-32 lg:w-44">
+              <div className="absolute -top-6 -right-3 aspect-17/18 w-24 overflow-hidden rounded-card border-4 border-paper shadow-card animate-mini-float sm:w-32 lg:w-44">
                 <Image
-                  src="/img/konveksi-toga-wisuda-terpercaya.jpg"
+                  src="/img/konveksi-toga-wisuda-clean.jpg"
                   alt="Toga wisuda produksi KOTABI"
                   fill
                   sizes="12rem"
@@ -146,7 +146,7 @@ export default function Home() {
                 key={product.slug}
                 className="group flex flex-col overflow-hidden rounded-card border border-line bg-paper shadow-sm transition-shadow duration-300 hover:shadow-card"
               >
-                <div className="relative aspect-square overflow-hidden bg-sand">
+                <div className="relative aspect-17/18 overflow-hidden bg-sand">
                   <Image
                     src={product.image}
                     alt={product.name}

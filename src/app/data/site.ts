@@ -38,7 +38,7 @@ export const PRODUCTS: Product[] = [
     eyebrow: "01 — CAMPUS IDENTITY",
     description:
       "Custom warna, bordir, logo, model, dan kebutuhan kampus/organisasi.",
-    image: "/img/produsen-jas-almamater.jpg",
+    image: "/img/produsen-jas-almamater-clean.jpg",
     href: "https://konveksi.toko-abi.com/2026/06/04/konveksi-jas-almamater-custom-logo/",
   },
   {
@@ -47,7 +47,7 @@ export const PRODUCTS: Product[] = [
     eyebrow: "02 — GRADUATION",
     description:
       "Untuk kampus, sekolah, lembaga, dan kebutuhan acara wisuda.",
-    image: "/img/pusat-konveksi-toga-wisuda.jpg",
+    image: "/img/pusat-konveksi-toga-wisuda-clean.jpg",
     href: "https://konveksi.toko-abi.com/2026/06/19/konveksi-toga-wisuda-terpercaya-tangerang/",
   },
   {
@@ -56,7 +56,7 @@ export const PRODUCTS: Product[] = [
     eyebrow: "03 — WORKWEAR",
     description:
       "Untuk kantor, lapangan, perusahaan, komunitas, dan tim operasional.",
-    image: "/img/Konveksi-Seragam-Kerja-No.1.jpeg",
+    image: "/img/Konveksi-Seragam-Kerja-clean.jpeg",
     href: "https://konveksi.toko-abi.com/2026/01/05/konveksi-seragam-kerja-sibolga/",
   },
   {
@@ -65,7 +65,7 @@ export const PRODUCTS: Product[] = [
     eyebrow: "04 — SCHOOLWEAR",
     description:
       "Produksi seragam untuk kebutuhan sekolah dan institusi pendidikan.",
-    image: "/img/Konveksi-Seragam-Sekolah-Terdekat-Bekasi.jpg",
+    image: "/img/Konveksi-Seragam-Sekolah-clean.jpg",
     href: "https://konveksi.toko-abi.com/2026/05/Distributor-Seragam-Sekolah-Terpercaya-e1780107838663.jpg",
   },
 ];
