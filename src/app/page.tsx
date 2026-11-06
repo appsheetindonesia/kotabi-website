@@ -93,7 +93,7 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -top-8 -right-4 hidden aspect-square w-36 overflow-hidden rounded-card border-4 border-paper shadow-card animate-mini-float md:block lg:w-44">
+              <div className="absolute -top-6 -right-3 aspect-square w-24 overflow-hidden rounded-card border-4 border-paper shadow-card animate-mini-float sm:w-32 lg:w-44">
                 <Image
                   src="/img/konveksi-toga-wisuda-terpercaya.jpg"
                   alt="Toga wisuda produksi KOTABI"

@@ -1,14 +1,38 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { NAV, waLink } from "../data/site";
 
-const ICONS: Record<string, string> = {
-  Produk: "M19 7V4a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3",
-  Galeri: "M3 11h18M3 16h18M3 6h18",
-  Proses: "M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z",
-  FAQ: "M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 0 1-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8-4.03 8-9 8z",
+const ICONS: Record<string, ReactNode> = {
+  // Kaos — kategori produk pakaian konveksi
+  Produk: (
+    <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" />
+  ),
+  // Foto — galeri visual produk
+  Galeri: (
+    <>
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <circle cx="9" cy="9" r="2" />
+      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+    </>
+  ),
+  // Diagram alur — proses produksi
+  Proses: (
+    <>
+      <rect width="8" height="8" x="3" y="3" rx="2" />
+      <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+      <rect width="8" height="8" x="13" y="13" rx="2" />
+    </>
+  ),
+  // Tanda tanya — FAQ
+  FAQ: (
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+      <path d="M12 17h.01" />
+    </>
+  ),
 };
 
 export default function BottomNav() {
@@ -61,7 +85,7 @@ export default function BottomNav() {
                 strokeLinejoin="round"
                 aria-hidden
               >
-                <path d={ICONS[item.label]} />
+                {ICONS[item.label]}
               </svg>
               {item.label}
             </a>
